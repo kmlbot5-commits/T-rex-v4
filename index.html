@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trex 🦖 AI — Free Video Prompt Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Trex <span>🦖</span> AI</div>
+  <div class="tag">FREE MODE</div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Make AI Video Prompts<br><span>Without an API Key</span></h1>
+    <p>Generate a ready-to-copy prompt, then use it in a free AI video creator.</p>
+  </section>
+
+  <section class="card">
+    <label>🎬 What should be in the video?</label>
+    <textarea id="subject" placeholder="Example: a small dinosaur walking through a Cambodian rice field"></textarea>
+
+    <label>⚡ What happens?</label>
+    <textarea id="action" placeholder="Example: the dinosaur runs toward the camera while the camera slowly moves backward"></textarea>
+
+    <div class="grid">
+      <div>
+        <label>🎨 Style</label>
+        <select id="style">
+          <option>cinematic realistic</option>
+          <option>photorealistic</option>
+          <option>3D cinematic</option>
+          <option>anime cinematic</option>
+          <option>Hollywood VFX</option>
+        </select>
+      </div>
+      <div>
+        <label>⏱️ Duration</label>
+        <select id="duration">
+          <option value="10">10 seconds</option>
+          <option value="15">15 seconds</option>
+        </select>
+      </div>
+      <div>
+        <label>📱 Ratio</label>
+        <select id="ratio">
+          <option value="9:16">9:16 Shorts/TikTok</option>
+          <option value="16:9">16:9 YouTube</option>
+          <option value="1:1">1:1 Square</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="generate">✨ Generate Trex Prompt</button>
+
+    <div id="result" class="result hidden">
+      <div class="resultTop">
+        <b>Your prompt</b>
+        <button id="copy">📋 Copy</button>
+      </div>
+      <pre id="prompt"></pre>
+      <p class="note">Trex Free Mode does not pretend to generate video on your server. It creates the prompt so you can paste it into a video generator that offers free credits.</p>
+      <div class="links">
+        <a href="https://dreamina.capcut.com/" target="_blank" rel="noopener">Open Dreamina ↗</a>
+        <a href="https://www.capcut.com/tools/ai-video-generator" target="_blank" rel="noopener">Open CapCut AI Video ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>🦖 Why this version needs no API key</h2>
+    <p>There is no secret key stored in the website. Trex generates the prompt in your browser/server and lets you use it with a provider that has its own free usage limits.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
